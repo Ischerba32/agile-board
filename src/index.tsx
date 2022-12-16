@@ -2,6 +2,7 @@ import React, { createContext } from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 import RootStore from './store';
+import { CssBaseline } from '@mui/material';
 
 const store = RootStore.create({});
 
@@ -13,6 +14,7 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <StoreContext.Provider value={store}>
+      <CssBaseline />
       <App />
     </StoreContext.Provider>
   </React.StrictMode>
