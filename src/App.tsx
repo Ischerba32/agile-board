@@ -1,14 +1,17 @@
 import React from 'react';
 import useStore from './hooks/useStore';
+import { observer } from 'mobx-react-lite';
+import { toJS } from 'mobx'
 
 const App = () => {
-  const { users } = useStore();
+  const { users, boards } = useStore();
 
-  console.log(users);
+  console.log(toJS(users));
+  console.log(toJS(boards.active?.sections[0].tasks));
 
   return (
     <div>Works</div>
   );
 }
 
-export default App;
+export default observer(App);
