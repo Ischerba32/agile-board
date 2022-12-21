@@ -1,9 +1,11 @@
-import { CardContent, Typography } from '@mui/material'
-import React from 'react'
+import { CardContent, Typography } from '@mui/material';
+import { observer } from 'mobx-react-lite';
+import React from 'react';
+import User from '../common/user';
 
-export const Task = ({ task }) => {
+export const Task = observer(({ task }: any) => {
   return (
-    <CardContent>
+    <CardContent draggable>
       <Typography
         color={'black'}
         gutterBottom
@@ -17,6 +19,7 @@ export const Task = ({ task }) => {
       >
         {task?.description}
         </Typography>
+        <User user={task.assignee} />
     </CardContent>
   )
-}
+})

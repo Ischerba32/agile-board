@@ -12,10 +12,10 @@ const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
-  <React.StrictMode>
+  // <React.StrictMode>
     <StoreContext.Provider value={store}>
       <CssBaseline />
       <App />
     </StoreContext.Provider>
-  </React.StrictMode>
+  // </React.StrictMode>
 );

@@ -1,7 +1,7 @@
 import queryString from "query-string";
 
-export const DOMAIN = 'http://localhost:3001';
-
+// export const DOMAIN = 'http://localhost:3001';
+export const ENDPOINT = '//localhost:3001';
 class Api {
   protected domain: string;
 
@@ -46,4 +46,4 @@ class Api {
   }
 }
 
-export default new Api(DOMAIN);
+export default new Api(ENDPOINT);

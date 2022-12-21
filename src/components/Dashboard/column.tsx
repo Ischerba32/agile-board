@@ -13,15 +13,15 @@ const getItemStyle = (draggableStyle) => {
   }
 }
 
-export const Column = observer(({ section }) => {
+export const Column = observer(({ section }: any) => {
   return (
     <div>
-      {section?.tasks?.map((task, index) => (
+      {section.tasks.map((task, index) => (
         <Draggable draggableId={task.id} key={task.id} index={index}>
           {(provided) => (
             <Card
               ref={provided.innerRef}
-              {...provided.draggablaProps}
+              {...provided.draggableProps}
               {...provided.dragHandleProps}
               style={getItemStyle(provided.draggableProps.style)}
             >

@@ -2,12 +2,6 @@ import { types, flow } from 'mobx-state-tree';
 
 import api from '../api';
 
-export interface IUser {
-  id: string;
-  createdAt: string;
-  name: string;
-  avatar: string;
-}
 
 export const User = types.model('User', {
   id: types.identifier,

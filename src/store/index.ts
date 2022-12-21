@@ -8,4 +8,5 @@ const RootStore = types.model('RootStore', {
   boards: types.optional(BoardStore, {}),
 });
 
+
 export default RootStore;
