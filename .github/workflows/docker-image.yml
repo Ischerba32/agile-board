@@ -12,8 +12,8 @@ jobs:
       - name: Publish to Registry
         uses: elgohr/Publish-Docker-Github-Action@master
         with:
-          registry: docker.pkg.github.com
-          name: docker.pkg.github.com/Ischerba32/agile-board/agile-board
+          registry: https://ghcr.io
+          name: https://ghcr.io/Ischerba32/agile-board/agile-board
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
           tags: "develop"
